@@ -1,0 +1,239 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url('../font/SourceSansPro-Black.ttf');
+}
+.SourceSansPro{
+    font-family: SourceSansPro;
+}
+/*warna text*/
+.biru{
+    color: #1377BE;
+}
+.biru-tua{
+    color: #005394;
+}
+.orange{
+    color: #FCA900;
+}
+.merah{
+    color: #FB2626;
+}
+.ijo{
+    color: #22E21B;
+}
+/*Bacgroud - warna */
+.bg-biru{
+    background-color: #1377BE;
+}
+.bg-biru-tua{
+    background-color: #005394;
+}
+.bg-orange{
+    background-color: #FCA900;
+}
+.bg-merah{
+    background-color: #FB2626;
+}
+.bg-ijo{
+    background-color: #22E21B;
+}
+/*padding*/
+.pd-50{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.pdr-50{
+    padding-right: 50px;
+}
+.pdl-50{
+    padding-left: 50px;
+}
+.pd-20{
+    padding-left: 30px;padding-right: 30px
+}
+/*TEXT*/
+.font-kecil{
+    font-size: 20px;
+}
+@media only screen and (max-width: 992px) {
+    .pd-50{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+@media (max-width: 992px){
+    .container, .container-md, .container-sm {
+        max-width: 850px;
+    }
+}
+.border-radius10{
+    border-radius: 10px;
+
+}
+.bunder{
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.pd-bt20{
+    padding-bottom: 20px;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+    padding: 60px 15px 0;
+}
+
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+/*=================================*/
+.card-shadow {
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+
+.profile-pic {
+    width: 100px !important;
+    height: 100px;
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: #1E88E5 !important;
+    border: none;
+    padding: 5px 20px !important;
+    font: inherit;
+    font-size: 50px !important
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    color: #0D47A1 !important;
+    background-color: transparent !important
+}
+
+.owl-dots {
+    display: none
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.item {
+    display: none
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.item.show {
+    display: block;
+    transition-duration: 0.4s
+}
+
+@media screen and (max-width: 999px) {
+
+    .next,
+    .prev {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .item {
+        display: block !important
+    }
+}
+
+.list-group-item+.list-group-item.active {
+    color: black;
+    margin-top: -1px;
+    border-top-width: 1px;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #ffffff;
+    padding-left: 50px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}

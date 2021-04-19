@@ -1,0 +1,79 @@
+body{
+	background-color: #FAECD1;
+}
+
+h1{
+	font-family: backslash;
+	color: #3A727F;
+	font-size: 60px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+label{
+	color:  #3A727F;
+}
+.navbar-brand{
+	font-family: backslash;
+	font-size: 30px;
+	padding: 0;
+	color: #FAECD1!important;
+}
+
+.nav-link{
+	color: #FAECD1!important;
+}
+
+.btn-primary{
+	border-radius: 30px;
+};
+
+.navbar{
+	background-color: #3A727F!important;
+	color: #FAECD1;
+}
+
+.btn-login{
+	background-color: #FAECD1;
+	color: #3A727F;	
+}
+
+.gambar{
+	width: 50%;
+	margin-top: 30%;
+}
+
+.desc{
+	font-family: montserrat;
+	padding-top: 5px;
+	color: #3A727F;	
+}
+
+.btn-blue {
+    background-color:  #3A727F;
+    width: 150px;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.btn-red {
+    background-color:  #ba454f;
+    width: 150px;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.btn-blue:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.row{
+	margin-bottom: 0;
+}

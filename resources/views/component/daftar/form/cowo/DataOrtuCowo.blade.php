@@ -1,0 +1,117 @@
+@extends('landing')
+
+@section('content')
+
+<style type="text/css">
+  h1{
+  font-family: backslash;
+  color: #3A727F;
+  font-size: 60px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+label{
+  color:  #3A727F;
+}
+body{
+  font-family: montserrat;
+}
+</style>
+
+  <div class="container">
+    <form action="{{route('nikah.cowo.DataOrtuCowoSubmit')}}" method="post">
+      @csrf
+    <center><h1>Data Diri Ayah</h1></center>
+        <div class="form-group">
+          <label>Nama Lengkap *</label>
+          <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" name="full_nameayah" value="{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->full_name : '' }}">
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label>Tanggal Lahir *</label>
+            <input type="date" class="form-control" placeholder="Masukkan Tanggal Lahir" value="{{($ayah->MaleCandidate->perenFathertMale != null) ? \Carbon\Carbon::parse($ayah->MaleCandidate->perenFathertMale->date_of_birth)->format('Y-m-d') : '' }}" name="date_of_birthayah">
+          </div>
+          <div class="form-group col">
+            <label>Tempat Lahir *</label>
+            <input type="text" class="form-control" placeholder="Masukkan Tempat Lahir" name="place_of_birthayah" value="{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->place_of_birth : '' }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Warga Negara *</label>
+          <input type="text" class="form-control" name="citizenayah" value="{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->citizen : '' }}" placeholder="Masukkan Warga Negara" >
+        </div>
+        <div class="form-group">
+          <label>Agama *</label>
+          <select class="form-control" name="religionayah">
+              <option value="{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->religion : '' }}" selected>{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->religion : '' }}</option>
+              <option value="Islam">Islam</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Katolik">Katolik</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Budha">Budha</option>
+              <option value="Konghuchu">Konghuchu</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Pekerjaan *</label>
+            <input type="text" class="form-control" placeholder="Masukkan Pekerjaan" name="professionayah" value="{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->profession : '' }}">
+          </div>
+           <div class="form-group">
+            <label>Tempat Tinggal *</label>
+            <input type="text" class="form-control" placeholder="Masukkan Tempat Tinggal" name="residenceayah" value="{{($ayah->MaleCandidate->perenFathertMale != null) ? $ayah->MaleCandidate->perenFathertMale->residence : '' }}">
+          </div>
+          <br>
+          <hr>
+
+          <center><h1>Data Diri Ibu</h1></center>
+
+          <div class="form-group">
+          <label>Nama Lengkap *</label>
+          <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" name="full_nameibu" value="{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->full_name : '' }}">
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label>Tanggal Lahir *</label>
+            <input type="date" class="form-control" placeholder="Masukkan Tanggal Lahir" value="{{($ibu->MaleCandidate->perenMothertMale != null) ? \Carbon\Carbon::parse($ibu->MaleCandidate->perenMothertMale->date_of_birth)->format('Y-m-d') : '' }}" name="date_of_birthibu">
+          </div>
+          <div class="form-group col">
+            <label>Tempat Lahir *</label>
+            <input type="text" class="form-control" placeholder="Masukkan Tempat Lahir" name="place_of_birthibu" value="{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->place_of_birth : '' }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Warga Negara *</label>
+          <input type="text" class="form-control" name="citizenibu" value="{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->citizen : '' }}" placeholder="Masukkan Warga Negara" >
+        </div>
+        <div class="form-group">
+          <label>Agama *</label>
+          <select class="form-control" name="religionibu">
+              <option value="{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->religion : '' }}" selected>{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->religion : '' }}</option>
+              <option value="Islam">Islam</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Katolik">Katolik</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Budha">Budha</option>
+              <option value="Konghuchu">Konghuchu</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Pekerjaan *</label>
+            <input type="text" class="form-control" placeholder="Masukkan Pekerjaan" name="professionibu" value="{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->profession : '' }}">
+          </div>
+           <div class="form-group">
+            <label>Tempat Tinggal *</label>
+            <input type="text" class="form-control" placeholder="Masukkan Tempat Tinggal" name="residenceibu" value="{{($ibu->MaleCandidate->perenMothertMale != null) ? $ibu->MaleCandidate->perenMothertMale->residence : '' }}">
+          </div>
+
+
+          <button type="submit" class="btn btn-blue text-center" href="">NEXT</button>
+          <a type="submit" class="btn btn-red text-center" href="">BACK</a>
+          <br><br><br><br>
+
+
+</form>
+  </div>
+</body>
+
+@endsection
